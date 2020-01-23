@@ -16,6 +16,24 @@ def join_ingredients(src)
 end
 
 def find_greater_pair(src)
+row_index = 0 
+  outer_arr = []
+  
+  while row_index < src.count do
+    element_index = 0
+    inner_arr = []
+    while element_index < src[row_index].count do
+      inner_arr << src[row_index][element_index]
+      end   
+    if inner_arr[0] < inner_arr[1]
+      inner_arr.shift
+    else
+      inner_arr.pop
+    end 
+    row_index += 1 
+    outer_arr << inner_arr
+  end
+  outer_arr
 
 end
 
