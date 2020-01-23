@@ -21,7 +21,7 @@ end
 
 
 def total_even_pairs(src)
-  outer_arr = []
+  total = 0
   row_index = 0 
   while row_index < src.length
     element_index = 0 
@@ -29,7 +29,7 @@ def total_even_pairs(src)
     while element_index < src[row_index].length
       inner_arr << src[row_index][element_index]
     end
-  if (inner_arr[0] % 2 = 0) && (inner_arr[1] % 2 = 0)
+  if (inner_arr[0] % 2 == 0) && (inner_arr[1] % 2 == 0)
     outer_arr << inner_arr
   end
   row_index += 1 
