@@ -30,10 +30,10 @@ def total_even_pairs(src)
       inner_arr << src[row_index][element_index]
     end
   if (inner_arr[0] % 2 == 0) && (inner_arr[1] % 2 == 0)
-    total += inner_arr
+    total += (inner_arr[0] + inner_arr[1])
   end
   row_index += 1 
   end
   
-  outer_arr
+  total
 end
